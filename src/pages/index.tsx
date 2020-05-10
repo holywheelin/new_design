@@ -21,7 +21,7 @@ const IndexPage = (props: LayoutProps) =>
       />
     </Segment>
     <Container>
-        <img src={require(`../imgs/holywheelin.jpg`)} width="99%" height="40%" />
+        <img src={require(`../imgs/_Holywheelin'-rogo_A.png`)} width="99%" height="40%" />
     </Container>
 
     {/* About this starter */}
