@@ -1,18 +1,16 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "allowJs": true,
-        "module": "commonjs",
-        "target": "esnext",
-        "jsx": "react",
-        "lib": ["dom", "esnext"]
-    },
-    "include": [
-        "./src/**/*"
-    ],
-    "typeRoots": ["node_modules/@types"]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"]
+    // "strict": true
+  },
+  "include": ["./src/**/*"],
+  "typeRoots": ["node_modules/@types"]
 }
