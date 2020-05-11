@@ -43,7 +43,7 @@ const IndexPage = (props: LayoutProps) => (
           <TwitterShareButton url={config.url}>
             <TwitterIcon size={config.size ? config.size : config.size} round />
           </TwitterShareButton>
-          <FacebookShareButton url={`www.asahi.com`}>
+          <FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
             <FacebookIcon size={config.size ? config.size : config.size} round />
           </FacebookShareButton>
         </div>
