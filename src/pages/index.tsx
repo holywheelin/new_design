@@ -3,6 +3,25 @@ import { Link } from "gatsby";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import { withLayout, LayoutProps, menuItems } from "../components/Layout";
 import { Segment, Container, Grid, Header, Icon } from "semantic-ui-react";
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+} from "react-share";
+
+interface SocialProps {
+    url: string;
+    title: string;
+    size?: number;
+    via?: string;
+}
+
+const config = {
+  via: "kara_d",
+  size: 100,
+  url: "www.asahi.com",
+};
 
 const IndexPage = (props: LayoutProps) => (
   <div>
@@ -16,8 +35,20 @@ const IndexPage = (props: LayoutProps) => (
       />
     </Segment>
     <Container>
-      <img src={require(`../imgs/_Holywheelin'-rogo_A.png`)} width="99%" height="40%" />
+      <img src={require(`../imgs/_Holywheelin'-rogo_A.png`)} width="100%" />
     </Container>
+    <Segment vertical className="stripe">
+      <div className="social-buttons" align="center">
+        <div className="buttons">
+          <TwitterShareButton url={config.url}>
+            <TwitterIcon size={config.size ? config.size : config.size} round />
+          </TwitterShareButton>
+          <FacebookShareButton url={`www.asahi.com`}>
+            <FacebookIcon size={config.size ? config.size : config.size} round />
+          </FacebookShareButton>
+        </div>
+      </div>
+    </Segment>
 
     {/* About this starter */}
     <Segment vertical className="stripe">

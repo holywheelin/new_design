@@ -19,7 +19,7 @@ module.exports = {
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true,
-        icon: 'public/icons/icon-144x144.png',
+        icon: 'public/icons/icon-144x144.png'
       }
     },
 
@@ -32,7 +32,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 690,
-              backgroundColor: `#f7f0eb`
+              backgroundColor: `#eae7cd`
             }
           },
           `gatsby-remark-prismjs`,
@@ -62,8 +62,8 @@ module.exports = {
         name: `HolyWheelin' Official Site`,
         short_name: `HolyWheelin' Official Site`,
         start_url: `/`,
-        background_color: `#f7f7f7`,
-        theme_color: `#191919`,
+        background_color: `#eae7cd`,
+        theme_color: `#eae7cd`,
         display: `minimal-ui`
       }
     },

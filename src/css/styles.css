@@ -3,8 +3,7 @@
 }
 
 .masthead.segment {
-  min-height: 80px;
-  padding: 1em 0;
+  min-height: 1px;
 }
 
 .masthead .logo.item img {
@@ -16,7 +15,6 @@
 }
 
 .masthead h1.ui.header {
-  margin-top: 3em;
   margin-bottom: 0;
   font-size: 4em;
   font-weight: normal;
@@ -53,7 +51,7 @@
 }
 
 .ui.stripe.alternate {
-  background-color: #f2f3f5;
+  background-color: #eae7cd;
 }
 
 .quote.stripe.segment {
@@ -75,7 +73,7 @@
 
 @media only screen and (max-width: 700px) {
   .masthead.segment {
-    min-height: 10px;
+    min-height: 2px;
   }
 
   .masthead h1.ui.header {
@@ -95,5 +93,5 @@ pre {
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.3em;
-  background: #272822;
+  background: #eae7cd;
 }

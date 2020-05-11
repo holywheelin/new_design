@@ -27,8 +27,8 @@ export const HeaderMenu = ({ items, pathname, Link, inverted, dispatch }: Header
       })}
     </Menu>
     <Container text>
-        <h1>HolyWheelin' THEATER&RADIO</h1>
-      </Container>
+      <h1>HolyWheelin' THEATER&RADIO</h1>
+    </Container>
   </Container>;
 
 export default connect()(HeaderMenu);
