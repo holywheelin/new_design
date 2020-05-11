@@ -20,7 +20,7 @@ interface SocialProps {
 const config = {
   via: "kara_d",
   size: 100,
-  url: "www.asahi.com",
+  url: "https://holywheelin.bsellc.jp/",
 };
 
 const IndexPage = (props: LayoutProps) => (
