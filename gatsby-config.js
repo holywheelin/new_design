@@ -18,7 +18,8 @@ module.exports = {
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
-        respectDNT: true
+        respectDNT: true,
+        icon: 'public/icons/icon-144x144.png',
       }
     },
 
