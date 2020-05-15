@@ -41,7 +41,6 @@ export default ({ body, postBodyComponents, headComponents }: Props) => {
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
       </body>
-      <script src="https://checkout.stripe.com/checkout.js"></script>
     </html>
   );
 };
