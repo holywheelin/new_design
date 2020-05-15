@@ -1,3 +1,7 @@
 {
-  "xo.enable": true
+  "files.exclude": {
+    "**/.git": true,
+    // "**/node_modules": true,
+    "public": true
+  }
 }

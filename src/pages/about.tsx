@@ -1,7 +1,7 @@
-import React from "react";
-import { Header, Container, Segment, Icon } from "semantic-ui-react";
-import { withLayout } from "../components/Layout";
-import Checkout from "../components/checkout";
+import React from 'react';
+import { Header, Container, Segment, Icon } from 'semantic-ui-react';
+import { withLayout } from '../components/Layout';
+import Checkout from '../components/checkout';
 
 const AboutPage = () => {
   return (

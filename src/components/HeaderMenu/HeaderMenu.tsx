@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
-import { toggleSidebar } from "../../store";
-import { Container, Menu, Icon } from "semantic-ui-react";
-import { MenuProps } from "../Menu";
+import React from 'react';
+import { Dispatch } from 'redux';
+import { connect } from 'react-redux';
+import { Container, Menu } from 'semantic-ui-react';
+import { toggleSidebar } from '../../store';
+import { MenuProps } from '../Menu';
 
-interface HeaderMenuProps extends MenuProps {
+type HeaderMenuProps = {
   dispatch?: Dispatch<any>;
   inverted?: boolean;
-}
+} & MenuProps;
 
 export const HeaderMenu = ({
   items,

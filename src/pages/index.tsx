@@ -1,28 +1,20 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
-import { withLayout, LayoutProps, menuItems } from "../components/Layout";
-import { Segment, Container, Grid, Header, Icon } from "semantic-ui-react";
+import React from 'react';
 import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
   TwitterIcon,
-} from "react-share";
-import Checkout from "../components/checkout";
-
-interface SocialProps {
-    url: string;
-    title: string;
-    size?: number;
-    via?: string;
-}
+} from 'react-share';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { Segment, Container, Grid, Header, Icon } from 'semantic-ui-react';
+import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
+import { withLayout, LayoutProps, menuItems } from '../components/Layout';
+import logo from '../imgs/_Holywheelin-logo_A.png';
 
 const config = {
-  via: "kara_d",
   size: 100,
-  url: "https://holywheelin.bsellc.jp/",
+  url: 'https://holywheelin.bsellc.jp/',
 };
 
 const SocialButtons = styled.div`
@@ -41,7 +33,7 @@ const IndexPage = (props: LayoutProps) => (
       />
     </Segment>
     <Container>
-      <img src={require(`../imgs/_Holywheelin'-rogo_A.png`)} width="100%" />
+      <img src={logo} width="100%" alt="holywheelin'_logo" />
     </Container>
     <Segment vertical className="stripe">
       <SocialButtons className="social-buttons">

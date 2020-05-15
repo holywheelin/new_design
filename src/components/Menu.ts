@@ -1,16 +1,16 @@
-import React from "react";
-import { GatsbyLinkProps } from "gatsby-link";
+import React from 'react';
+import { GatsbyLinkProps } from 'gatsby-link';
 
-export interface MenuItem {
+export type MenuItem = {
   name: string;
   path: string;
   exact: boolean;
   icon?: string;
   inverted?: boolean;
-}
+};
 
-export interface MenuProps extends React.HTMLProps<HTMLDivElement> {
+export type MenuProps = {
   items: MenuItem[];
   pathname: string;
   Link: React.ComponentClass<GatsbyLinkProps<any>> | any;
-}
+} & React.HTMLProps<HTMLDivElement>;

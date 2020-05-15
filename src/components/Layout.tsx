@@ -1,29 +1,29 @@
-import { Link } from "gatsby";
-import React from "react";
-import HeaderMenu from "./HeaderMenu/HeaderMenu";
-import SidebarMenu from "./SidebarMenu/SidebarMenu";
-import { Segment, Icon, Container, Sidebar } from "semantic-ui-react";
-import "../css/styles.css";
-import "../css/responsive.css";
-import "../css/semantic.min.css";
-import "prismjs/themes/prism-okaidia.css";
-import { Provider } from "react-redux";
-import { store } from "../store";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Link } from 'gatsby';
+import { Segment, Icon, Container, Sidebar } from 'semantic-ui-react';
+import HeaderMenu from './HeaderMenu/HeaderMenu';
+import SidebarMenu from './SidebarMenu/SidebarMenu';
+import '../css/styles.css';
+import '../css/responsive.css';
+import '../css/semantic.min.css';
+import 'prismjs/themes/prism-okaidia.css';
+import { store } from '../store';
 
 export const menuItems = [
-  { name: "Home", path: "/", exact: true, icon: "home", inverted: true },
+  { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
 ];
 
-export interface LayoutProps {
+export type LayoutProps = {
   location: {
     pathname: string;
   };
   children: any;
-}
+};
 
 const Layout = (props: LayoutProps) => {
   const { pathname } = props.location;
-  const isHome = pathname === "/";
+  const isHome = pathname === '/';
 
   return (
     <Provider store={store}>
@@ -32,10 +32,10 @@ const Layout = (props: LayoutProps) => {
           Link={Link}
           pathname={pathname}
           items={menuItems}
+          // @ts-ignore
           visible={false}
         />
-
-        <Sidebar.Pusher style={{ minHeight: "100vh" }}>
+        <Sidebar.Pusher style={{ minHeight: '100vh' }}>
           {/* Header */}
           {isHome ? null : (
             <HeaderMenu Link={Link} pathname={pathname} items={menuItems} />
@@ -48,7 +48,7 @@ const Layout = (props: LayoutProps) => {
           <Segment
             inverted
             vertical
-            style={{ position: "absolute", bottom: 0, width: "100%" }}
+            style={{ position: 'absolute', bottom: 0, width: '100%' }}
           >
             <Container textAlign="center">
               <p>

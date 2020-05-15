@@ -1,7 +1,7 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-const config = require("../gatsby-config.js");
+import * as config from '../gatsby-config';
 
 type Props = {
   body: any;

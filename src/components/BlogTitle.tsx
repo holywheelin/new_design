@@ -1,5 +1,5 @@
-import React from "react";
-import { Header, Segment, Icon } from "semantic-ui-react";
+import React from 'react';
+import { Header, Segment, Icon } from 'semantic-ui-react';
 
 export default () => {
   return (

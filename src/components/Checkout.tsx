@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, MouseEvent } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect, useCallback, MouseEvent } from 'react';
+import styled from 'styled-components';
 
 const amount = 2500;
 const Card = styled.div`
@@ -27,13 +27,13 @@ const Button = styled.button`
 
 const Checkout = () => {
   const [disabled, setDisabled] = useState(false);
-  const [buttonText, setButtonText] = useState("チケットを購入する");
-  const [paymentMessage, setPaymentMessage] = useState("");
+  const [buttonText, setButtonText] = useState('チケットを購入する');
+  const [paymentMessage, setPaymentMessage] = useState('');
   const [stripeHandler, setStripeHandler] = useState<StripeCheckoutHandler>();
 
   const handleReset = () => {
     setDisabled(false);
-    setButtonText("チケットを購入する");
+    setButtonText('チケットを購入する');
   };
 
   useEffect(() => {
@@ -51,30 +51,30 @@ const Checkout = () => {
       }
 
       setDisabled(true);
-      setButtonText("WAITING...");
+      setButtonText('WAITING...');
       stripeHandler.open({
-        name: "Demo Product",
+        name: 'Demo Product',
         amount: amount,
-        description: "A product well worth your time",
+        description: 'A product well worth your time',
         token: async (token) => {
           try {
             // TODO
             const response = await fetch(`AWS_LAMBDA_URL`, {
-              method: "POST",
-              mode: "no-cors",
+              method: 'POST',
+              mode: 'no-cors',
               body: JSON.stringify({
                 token,
                 amount,
               }),
               headers: new Headers({
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
               }),
             });
             handleReset();
-            setPaymentMessage("Payment Successful!");
+            setPaymentMessage('Payment Successful!');
             return response;
           } catch (e) {
-            setPaymentMessage("Payment Failed");
+            setPaymentMessage('Payment Failed');
           }
         },
       });

@@ -1,17 +1,16 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
-import { GatsbyLinkProps } from "gatsby-link";
-import { StoreState } from "../../store";
-import { MenuProps, MenuItem } from "../Menu";
-import { Menu, Icon, Sidebar } from "semantic-ui-react";
-import { SemanticICONS } from "semantic-ui-react";
+import React from 'react';
+import { Dispatch } from 'redux';
+import { connect } from 'react-redux';
+import { GatsbyLinkProps } from 'gatsby-link';
+import { Menu, Icon, Sidebar, SemanticICONS } from 'semantic-ui-react';
+import { StoreState } from '../../store';
+import { MenuProps, MenuItem } from '../Menu';
 
-interface SidebarMenuProps extends MenuProps {
-  visible?: boolean;
+type SidebarMenuProps = {
+  visible: boolean;
   dispatch?: Dispatch<any>;
   Link: React.ComponentClass<GatsbyLinkProps<any>>;
-}
+} & MenuProps;
 
 export const SidebarMenu = ({
   items,
@@ -50,6 +49,4 @@ const mapStateToProps = (state: StoreState) => ({
   visible: state.isSidebarVisible,
 });
 
-export default connect<any, void, SidebarMenuProps>(mapStateToProps)(
-  SidebarMenu
-);
+export default connect(mapStateToProps)(SidebarMenu);
