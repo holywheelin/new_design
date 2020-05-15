@@ -43,5 +43,6 @@ export default (props: HtmlProps) => {
         {props.postBodyComponents}
       </body>
     </html>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
   );
 };

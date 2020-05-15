@@ -9,6 +9,7 @@ import {
     TwitterShareButton,
     TwitterIcon,
 } from "react-share";
+import Checkout from "../components/checkout";
 
 interface SocialProps {
     url: string;
