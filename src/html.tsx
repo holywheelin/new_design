@@ -34,6 +34,7 @@ export default (props: HtmlProps) => {
         {head.meta.toComponent()}
         {head.link.toComponent()}
         {verification}
+        <script src="https://checkout.stripe.com/checkout.js"></script>
       </head>
       <body>
         <div
@@ -43,6 +44,5 @@ export default (props: HtmlProps) => {
         {props.postBodyComponents}
       </body>
     </html>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
   );
 };

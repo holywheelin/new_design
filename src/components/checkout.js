@@ -29,11 +29,11 @@ const buttonStyles = {
 const Checkout = class extends React.Component {
   state = {
     disabled: false,
-    buttonText: "BUY NOW",
+    buttonText: "チケットを購入する",
     paymentMessage: "",
   }
   resetButton() {
-    this.setState({ disabled: false, buttonText: "BUY NOW" })
+    this.setState({ disabled: false, buttonText: "チケットを購入する" })
   }
   componentDidMount() {
     this.stripeHandler = window.StripeCheckout.configure({
@@ -44,57 +44,57 @@ const Checkout = class extends React.Component {
        this.resetButton()
      },
    })
- }
- openStripeCheckout(event) {
-   event.preventDefault()
-   this.setState({ disabled: true, buttonText: "WAITING..." })
-   this.stripeHandler.open({
-     name: "Demo Product",
-     amount: amount,
-     description: "A product well worth your time",
-     token: token => {
-       fetch(`AWS_LAMBDA_URL`, {
-         method: "POST",
-         mode: "no-cors",
-         body: JSON.stringify({
-           token,
-           amount,
-         }),
-         headers: new Headers({
-           "Content-Type": "application/json",
-         }),
-       })
-         .then(res => {
-           console.log("Transaction processed successfully")
-           this.resetButton()
-           this.setState({ paymentMessage: "Payment Successful!" })
-           return res
-         })
-         .catch(error => {
-           console.error("Error:", error)
-           this.setState({ paymentMessage: "Payment Failed" })
-         })
-     },
-   })
- }
- render() {
-   return (
-     <div style={cardStyles}>
-       <h4>Spend your Money!</h4>
-       <p>
-         Use any email, 4242 4242 4242 4242 as the credit card number, any 3
-         digit number, and any future date of expiration.
-       </p>
-       <button
-         style={buttonStyles}
-         onClick={event => this.openStripeCheckout(event)}
-         disabled={this.state.disabled}
-       >
-         {this.state.buttonText}
-       </button>
-       {this.state.paymentMessage}
-     </div>
-   )
- }
+  }
+  openStripeCheckout(event) {
+    event.preventDefault()
+    this.setState({ disabled: true, buttonText: "WAITING..." })
+    this.stripeHandler.open({
+      name: "Demo Product",
+      amount: amount,
+      description: "A product well worth your time",
+      token: token => {
+        fetch(`AWS_LAMBDA_URL`, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify({
+            token,
+            amount,
+          }),
+          headers: new Headers({
+            "Content-Type": "application/json",
+          }),
+        })
+          .then(res => {
+            console.log("Transaction processed successfully")
+            this.resetButton()
+            this.setState({ paymentMessage: "Payment Successful!" })
+            return res
+          })
+          .catch(error => {
+            console.error("Error:", error)
+            this.setState({ paymentMessage: "Payment Failed" })
+          })
+      },
+    })
+  }
+  render() {
+    return (
+      <div style={cardStyles}>
+        <h4>当日チケットを購入する</h4>
+        <p>
+          Use any email, 4242 4242 4242 4242 as the credit card number, any 3
+          digit number, and any future date of expiration.
+        </p>
+        <button
+          style={buttonStyles}
+          onClick={event => this.openStripeCheckout(event)}
+          disabled={this.state.disabled}
+        >
+          {this.state.buttonText}
+        </button>
+        {this.state.paymentMessage}
+      </div>
+    )
+  }
 }
 export default Checkout
