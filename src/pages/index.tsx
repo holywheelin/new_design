@@ -11,7 +11,6 @@ import {
   TwitterIcon,
 } from "react-share";
 import Checkout from "../components/checkout";
-import DogVideo from "../movie/drivein_test0505.mp4"
 
 interface SocialProps {
     url: string;
@@ -41,11 +40,6 @@ const IndexPage = (props: LayoutProps) => (
         inverted
       />
     </Segment>
-    <Container>
-      <video controls>
-        <source src={DogVideo} type="video/mp4" />
-      </video>
-    </Container>
     <Container>
       <img src={require(`../imgs/_Holywheelin'-rogo_A.png`)} width="100%" />
     </Container>
