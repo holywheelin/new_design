@@ -51,6 +51,8 @@
     "@types/react-redux": "^7.1.8",
     "@types/react-test-renderer": "^16.9.2",
     "@types/semantic-ui": "^2.2.7",
+    "@types/stripe-checkout": "^1.0.3",
+    "@types/styled-components": "^5.1.0",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",

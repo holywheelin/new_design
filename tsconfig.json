@@ -8,8 +8,8 @@
     "module": "commonjs",
     "target": "esnext",
     "jsx": "react",
-    "lib": ["dom", "esnext"]
-    // "strict": true
+    "lib": ["dom", "esnext"],
+    "strict": true
   },
   "include": ["./src/**/*"],
   "typeRoots": ["node_modules/@types"]
