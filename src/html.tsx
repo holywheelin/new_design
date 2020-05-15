@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const config = require("../gatsby-config.js");
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default ({ body, postBodyComponents, headComponents }: Props) => {
-  const head = Helmet.rewind();
+  const head = Helmet.renderStatic();
 
   const verification =
     config.siteMetadata && config.siteMetadata.googleVerification ? (
