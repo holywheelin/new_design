@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { GatsbyLinkProps } from "gatsby-link";
@@ -13,12 +13,26 @@ interface SidebarMenuProps extends MenuProps {
   Link: React.ComponentClass<GatsbyLinkProps<any>>;
 }
 
-export const SidebarMenu = ({ items, pathname, Link, visible }: SidebarMenuProps) => {
-  const isActive = (item: MenuItem) => (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
-  const activeItem = items.find((item: MenuItem) => isActive(item)) || {} as MenuItem;
+export const SidebarMenu = ({
+  items,
+  pathname,
+  Link,
+  visible,
+}: SidebarMenuProps) => {
+  const isActive = (item: MenuItem) =>
+    item.exact ? pathname === item.path : pathname.startsWith(item.path);
+  const activeItem =
+    items.find((item: MenuItem) => isActive(item)) || ({} as MenuItem);
   return (
-    <Sidebar as={Menu} animation="slide along" width="thin"
-      visible={visible} icon="labeled" vertical inverted={activeItem.inverted}>
+    <Sidebar
+      as={Menu}
+      animation="slide along"
+      width="thin"
+      visible={visible}
+      icon="labeled"
+      vertical
+      inverted={activeItem.inverted}
+    >
       {items.map((item) => {
         const active = isActive(item);
         return (
@@ -36,4 +50,6 @@ const mapStateToProps = (state: StoreState) => ({
   visible: state.isSidebarVisible,
 });
 
-export default connect<any, void, SidebarMenuProps>(mapStateToProps)(SidebarMenu);
+export default connect<any, void, SidebarMenuProps>(mapStateToProps)(
+  SidebarMenu
+);

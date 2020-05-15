@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { GatsbyLinkProps } from "gatsby-link";
 
 export interface MenuItem {

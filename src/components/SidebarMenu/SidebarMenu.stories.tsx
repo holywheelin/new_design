@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, text } from "@storybook/addon-knobs";
@@ -11,8 +11,11 @@ const items = [
   { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" },
 ];
 
-const LinkStub: any = (props: any) =>
-  <div {...props} onClick={action(props.to.toString())} >{props.children}</div>;
+const LinkStub: any = (props: any) => (
+  <div {...props} onClick={action(props.to.toString())}>
+    {props.children}
+  </div>
+);
 
 storiesOf("SidebarMenu", module)
   .addDecorator(withKnobs)
