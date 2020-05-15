@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { toggleSidebar } from "../../store";
@@ -10,25 +10,41 @@ interface HeaderMenuProps extends MenuProps {
   inverted?: boolean;
 }
 
-export const HeaderMenu = ({ items, pathname, Link, inverted, dispatch }: HeaderMenuProps) =>
+export const HeaderMenu = ({
+  items,
+  pathname,
+  Link,
+  inverted,
+  dispatch,
+}: HeaderMenuProps) => (
   <Container>
     <Menu size="large" pointing secondary inverted={inverted}>
-      <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch && dispatch(toggleSidebar())} />
+      <Menu.Item
+        as="a"
+        className="mobile only"
+        icon="sidebar"
+        onClick={() => dispatch && dispatch(toggleSidebar())}
+      />
       {items.map((item) => {
-        const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
-        return <Menu.Item
-          as={Link}
-          className="mobile hidden"
-          name={item.name}
-          to={item.path}
-          key={item.path}
-          active={active}
-        />;
+        const active = item.exact
+          ? pathname === item.path
+          : pathname.startsWith(item.path);
+        return (
+          <Menu.Item
+            as={Link}
+            className="mobile hidden"
+            name={item.name}
+            to={item.path}
+            key={item.path}
+            active={active}
+          />
+        );
       })}
     </Menu>
     <Container text>
       <h1>HolyWheelin' THEATER&RADIO</h1>
     </Container>
-  </Container>;
+  </Container>
+);
 
 export default connect()(HeaderMenu);

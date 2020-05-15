@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import * as React from "react";
+import React from "react";
 import HeaderMenu from "./HeaderMenu/HeaderMenu";
 import SidebarMenu from "./SidebarMenu/SidebarMenu";
 import { Segment, Icon, Container, Sidebar } from "semantic-ui-react";
@@ -28,26 +28,32 @@ const Layout = (props: LayoutProps) => {
   return (
     <Provider store={store}>
       <Sidebar.Pushable as={Segment}>
-
-        <SidebarMenu Link={Link} pathname={pathname} items={menuItems} visible={false} />
+        <SidebarMenu
+          Link={Link}
+          pathname={pathname}
+          items={menuItems}
+          visible={false}
+        />
 
         <Sidebar.Pusher style={{ minHeight: "100vh" }}>
           {/* Header */}
-          {isHome ? null : <HeaderMenu
-            Link={Link}
-            pathname={pathname}
-            items={menuItems}
-          />}
+          {isHome ? null : (
+            <HeaderMenu Link={Link} pathname={pathname} items={menuItems} />
+          )}
 
           {/* Render children pages */}
-          <div style={{ paddingBottom: 60 }}>
-            {props.children}
-          </div>
+          <div style={{ paddingBottom: 60 }}>{props.children}</div>
 
           {/* Footer */}
-          <Segment inverted vertical style={{ position: "absolute", bottom: 0, width: "100%" }}>
+          <Segment
+            inverted
+            vertical
+            style={{ position: "absolute", bottom: 0, width: "100%" }}
+          >
             <Container textAlign="center">
-              <p>Created By <Icon name="heart" /> by HolyWheelin'</p>
+              <p>
+                Created By <Icon name="heart" /> by HolyWheelin'
+              </p>
             </Container>
           </Segment>
         </Sidebar.Pusher>
@@ -58,7 +64,9 @@ const Layout = (props: LayoutProps) => {
 
 export default Layout;
 
-export const withLayout = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
+export const withLayout = <P extends object>(
+  WrappedComponent: React.ComponentType<P>
+) =>
   class WithLayout extends React.Component<P & LayoutProps> {
     render() {
       return (

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Header, Segment, Icon } from "semantic-ui-react";
 
 export default () => {
@@ -8,9 +8,7 @@ export default () => {
         <Icon name="newspaper" />
         <Header.Content>
           HolyWheelin' Official Site
-            <Header.Subheader>
-             ©︎HolyWheelin'
-            </Header.Subheader>
+          <Header.Subheader>©︎HolyWheelin'</Header.Subheader>
         </Header.Content>
       </Header>
     </Segment>

@@ -3,10 +3,6 @@ module.exports = {
   siteMetadata: {
     title: `HolyWheelin' Official Site`,
     googleVerification: `abcdefz`,
-    disqus: `gatsby-typescript`
-  },
-  mapping: {
-    "MarkdownRemark.frontmatter.author": `AuthorJson`
   },
   plugins: [
     {
@@ -19,27 +15,8 @@ module.exports = {
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true,
-        icon: 'public/icons/icon-144x144.png'
-      }
-    },
-
-    // Parse all markdown files (each plugin add/parse some data into graphQL layer)
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 690,
-              backgroundColor: `#eae7cd`
-            }
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-autolink-headers`
-        ]
-      }
+        icon: "public/icons/icon-144x144.png",
+      },
     },
 
     // Parse all images files
@@ -64,8 +41,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#eae7cd`,
         theme_color: `#eae7cd`,
-        display: `minimal-ui`
-      }
+        display: `minimal-ui`,
+      },
     },
     /* eslint-enable camelcase */
 
@@ -73,6 +50,6 @@ module.exports = {
     // html file so the site works offline and is otherwise
     // resistant to bad networks. Works with almost any
     // site!
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 };
