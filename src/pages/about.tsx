@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Container, Segment, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
-//import Checkout from '../components/checkout';
+import { Checkout } from '../components/Checkout';
 
 const AboutPage = () => (
   <Layout>
@@ -12,11 +12,9 @@ const AboutPage = () => (
           <Header.Content>チケット・グッズ</Header.Content>
         </Header>
       </Segment>
-      {/*<Segment>
-        <div>
-          <Checkout />
-        </div>
-      </Segment>*/}
+      <Segment>
+        <Checkout />
+      </Segment>
     </Container>
   </Layout>
 );

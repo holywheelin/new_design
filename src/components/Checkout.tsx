@@ -25,7 +25,7 @@ const Button = styled.button`
   letterSpacing: "1.5px",
 `;
 
-const Checkout = () => {
+export const Checkout = () => {
   const [disabled, setDisabled] = useState(false);
   const [buttonText, setButtonText] = useState('チケットを購入する');
   const [paymentMessage, setPaymentMessage] = useState('');
@@ -96,5 +96,3 @@ const Checkout = () => {
     </Card>
   );
 };
-
-export default Checkout;
