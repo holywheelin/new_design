@@ -2,6 +2,10 @@
   display: none;
 }
 
+.background {
+  background-color:"white"
+}
+
 .masthead.segment {
   min-height: 1px;
 }

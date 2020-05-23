@@ -10,14 +10,16 @@ type HeaderMenuProps = {
   inverted?: boolean;
 } & MenuProps;
 
-export const HeaderMenu = ({
+{/*export const HeaderMenu = ({
   items,
   pathname,
   Link,
   inverted,
   dispatch,
 }: HeaderMenuProps) => (
-  <Container>
+*/}
+export const HeaderMenu = () => (
+  <Container class="background">
     {/*<Menu size="large" pointing secondary inverted={inverted}>
       <Menu.Item
         as="a"

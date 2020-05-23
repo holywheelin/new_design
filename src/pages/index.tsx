@@ -26,7 +26,8 @@ const SocialButtons = styled.div`
 const IndexPage = (props: LayoutProps) => (
   <div>
     {/* Master head */}
-    <Segment vertical inverted textAlign="center" className="masthead">
+    {/*<Segment vertical inverted textAlign="center" className="masthead">*/}
+    <Segment vertical inverted textAlign="center">
       <HeaderMenu
         Link={Link}
         pathname={props.location.pathname}
