@@ -1,10 +1,10 @@
 import React from 'react';
 import { Header, Container, Segment, Icon } from 'semantic-ui-react';
-import { withLayout } from '../components/Layout';
+import { Layout } from '../components/Layout';
 import Checkout from '../components/checkout';
 
-const AboutPage = () => {
-  return (
+const AboutPage = () => (
+  <Layout>
     <Container>
       <Segment vertical>
         <Header as="h2">
@@ -18,7 +18,7 @@ const AboutPage = () => {
         </div>
       </Segment>
     </Container>
-  );
-};
+  </Layout>
+);
 
-export default withLayout(AboutPage);
+export default AboutPage;
