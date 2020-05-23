@@ -29,14 +29,12 @@ const DesktopContainer: React.FC = ({ children }) => {
         onBottomPassedReverse={hideFixedMenu}
       >
         <Segment
-          inverted
           textAlign="center"
-          style={{ minHeight: 1000, padding: '1em 0em' }}
+          style={{ minHeight: 500, padding: '1em 0em' }}
           vertical
         >
           <Menu
             fixed={fixed ? 'top' : undefined}
-            inverted={!fixed}
             pointing={!fixed}
             secondary={!fixed}
             size="large"
@@ -46,9 +44,9 @@ const DesktopContainer: React.FC = ({ children }) => {
               <Menu.Item as="a" active>
                 Home
               </Menu.Item>
-              <Menu.Item as="a">Work</Menu.Item>
-              <Menu.Item as="a">Company</Menu.Item>
-              <Menu.Item as="a">Careers</Menu.Item>
+              <Menu.Item as="a">Comming Soon!</Menu.Item>
+              <Menu.Item as="a">Comming Soon!</Menu.Item>
+              <Menu.Item as="a">Comming Soon!</Menu.Item>
             </Container>
           </Menu>
           <Heading />
@@ -73,7 +71,6 @@ const MobileContainer: React.FC = ({ children }) => {
       <Sidebar
         as={Menu}
         animation="push"
-        inverted
         onHide={handleSidebarHide}
         vertical
         visible={sidebarOpened}
@@ -89,13 +86,13 @@ const MobileContainer: React.FC = ({ children }) => {
 
       <Sidebar.Pusher dimmed={sidebarOpened}>
         <Segment
-          inverted
+          
           textAlign="center"
           style={{ minHeight: 350, padding: '1em 0em' }}
           vertical
         >
           <Container>
-            <Menu inverted pointing secondary size="large">
+            <Menu pointing secondary size="large">
               <Menu.Item onClick={handleToggle}>
                 <Icon name="sidebar" />
               </Menu.Item>
