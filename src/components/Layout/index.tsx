@@ -86,7 +86,6 @@ const MobileContainer: React.FC = ({ children }) => {
 
       <Sidebar.Pusher dimmed={sidebarOpened}>
         <Segment
-          
           textAlign="center"
           style={{ minHeight: 250, padding: '1em 0em' }}
           vertical
