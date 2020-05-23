@@ -18,7 +18,7 @@ export const HeaderMenu = ({
   dispatch,
 }: HeaderMenuProps) => (
   <Container>
-    <Menu size="large" pointing secondary inverted={inverted}>
+    {/*<Menu size="large" pointing secondary inverted={inverted}>
       <Menu.Item
         as="a"
         className="mobile only"
@@ -41,6 +41,7 @@ export const HeaderMenu = ({
         );
       })}
     </Menu>
+    */}
     <Container text>
       <h1>HolyWheelin' THEATER&RADIO</h1>
     </Container>

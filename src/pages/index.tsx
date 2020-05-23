@@ -9,8 +9,10 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Segment, Container, Grid, Header, Icon } from 'semantic-ui-react';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
+//import Slack from '../components/Slack';
 import { withLayout, LayoutProps, menuItems } from '../components/Layout';
 import logo from '../imgs/_Holywheelin-logo_A.png';
+import { WebClient, WebAPICallResult } from '@slack/web-api';
 
 const config = {
   size: 100,
