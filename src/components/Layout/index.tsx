@@ -14,6 +14,7 @@ import '../../css/styles.css';
 import '../../css/responsive.css';
 import '../../css/semantic.min.css';
 import 'prismjs/themes/prism-okaidia.css';
+import styled from 'styled-components';
 
 const DesktopContainer: React.FC = ({ children }) => {
   const [fixed, setFixed] = useState(false);
@@ -108,9 +109,15 @@ const MobileContainer: React.FC = ({ children }) => {
   );
 };
 
+const StyledBackGround = styled.div`
+  background-color: #ede8cb;
+`;
+
 export const Layout: React.FC = ({ children }) => (
-  <div>
-    <DesktopContainer>{children}</DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
-  </div>
+  <StyledBackGround>
+    <div>
+      <DesktopContainer>{children}</DesktopContainer>
+      <MobileContainer>{children}</MobileContainer>
+    </div>
+  </StyledBackGround>
 );

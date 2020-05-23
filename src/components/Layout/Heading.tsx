@@ -29,8 +29,8 @@ export const Heading: React.FC<Props> = ({ mobile = false }) => (
 );
 
 const StyledImage = styled.img`
-  background-color: #fff;
-  border: 18px solid #fff;
+  background-color: #ede8cb;
+  border: 18px solid #ede8cb;
 `;
 
 const Logo = () => (
