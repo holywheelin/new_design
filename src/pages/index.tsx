@@ -52,6 +52,7 @@ const IndexPage = () => (
       </SocialButtons>
     </Segment>
     <Grid stackable verticalAlign="middle" className="container">
+      <div class="iframe-wrap">
       <iframe
         width="1280"
         height="720"
@@ -60,6 +61,7 @@ const IndexPage = () => (
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
+      </div>
     </Grid>
     {/* About this starter */}
     {/*<Segment vertical className="stripe">
@@ -157,7 +159,5 @@ const AlignInstruction = styled.div`
 const SocialButtons = styled.div`
   text-align: center;
 `;
-
-
 
 export default IndexPage;

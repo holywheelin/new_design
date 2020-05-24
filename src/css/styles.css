@@ -96,4 +96,23 @@ pre {
   background: #eae7cd;
 }
 
+.iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow:auto; 
+  -webkit-overflow-scrolling:touch;
+  border:2px solid #ccc; 
+}
+.iframe-wrap iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+}
+
 .wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
+
