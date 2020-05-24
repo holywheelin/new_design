@@ -75,16 +75,9 @@ const MobileContainer: React.FC = ({ children }) => {
         vertical
         visible={sidebarOpened}
       >
-        {/* TODO: active管理・Link化 */}
-        <Menu.Item as="a" active>
-          Home
-        </Menu.Item>
-        {/*<Menu.Item as="a">Comming Soon!</Menu.Item>
-        <Menu.Item as="a">Comming Soon!</Menu.Item>
-  <Menu.Item as="a">Comming Soon!</Menu.Item>*/}
       </Sidebar>
 
-      <Sidebar.Pusher dimmed={sidebarOpened}>
+      {/*<Sidebar.Pusher dimmed={sidebarOpened}>
         <Segment
           textAlign="center"
           style={{ minHeight: 250, padding: '1em 0em' }}
@@ -100,7 +93,10 @@ const MobileContainer: React.FC = ({ children }) => {
           <Heading mobile />
         </Segment>
         {children}
-      </Sidebar.Pusher>
+       </Sidebar.Pusher>*/}
+       <Heading mobile />
+       <Menu.Item onClick={handleToggle}></Menu.Item>
+       {children}
     </Responsive>
   );
 };
