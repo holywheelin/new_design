@@ -94,9 +94,12 @@ const MobileContainer: React.FC = ({ children }) => {
         </Segment>
         {children}
        </Sidebar.Pusher>*/}
-       <Heading mobile />
-       <Menu.Item onClick={handleToggle}></Menu.Item>
-       {children}
+               <Segment
+          textAlign="center"
+          style={{ minHeight: 250, padding: '1em 0em' }}
+          vertical
+        ><Heading mobile />
+        {children}</Segment>
     </Responsive>
   );
 };
