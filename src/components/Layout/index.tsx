@@ -39,15 +39,15 @@ const DesktopContainer: React.FC = ({ children }) => {
             secondary={!fixed}
             size="large"
           >
-            <Container>
+            {/*<Container>*/}
               {/* TODO: active管理・Link化 */}
-              <Menu.Item as="a" active>
+              {/*<Menu.Item as="a" active>
                 Home
-              </Menu.Item>
+  </Menu.Item>*/}
               {/*<Menu.Item as="a">Comming Soon!</Menu.Item>
               <Menu.Item as="a">Comming Soon!</Menu.Item>
   <Menu.Item as="a">Comming Soon!</Menu.Item>*/}
-            </Container>
+            {/*</Container>*/}
           </Menu>
           <Heading />
         </Segment>
