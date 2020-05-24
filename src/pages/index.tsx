@@ -8,6 +8,7 @@ import {
 import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
+import instalogo from '../imgs/instagram.svg'
 
 const config = {
   size: 100,
@@ -32,14 +33,17 @@ const IndexPage = () => (
             />
             </a>
           {/*</TwitterShareButton>*/}
-          <FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
+          <a href = "https://www.instagram.com/holywheelin">
+          <img src={instalogo} width="80" height="80" alt="logo" />
+          </a>
+          {/*<FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
             <FacebookIcon
               size={config.size ? config.size : config.size}
               round
               bgStyle={{ fill: '#ede8cb' }}
               iconFillColor="#8c2125"
             />
-          </FacebookShareButton>
+        </FacebookShareButton>*/}
         </div>
       </SocialButtons>
     </Segment>
@@ -47,7 +51,7 @@ const IndexPage = () => (
       <iframe
         width="1280"
         height="720"
-        src="https://www.youtube.com/embed/19ujruMciyk"
+        src="https://www.youtube.com/embed/vfY5GDtiGCU"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>

@@ -79,9 +79,9 @@ const MobileContainer: React.FC = ({ children }) => {
         <Menu.Item as="a" active>
           Home
         </Menu.Item>
+        {/*<Menu.Item as="a">Comming Soon!</Menu.Item>
         <Menu.Item as="a">Comming Soon!</Menu.Item>
-        <Menu.Item as="a">Comming Soon!</Menu.Item>
-        <Menu.Item as="a">Comming Soon!</Menu.Item>
+  <Menu.Item as="a">Comming Soon!</Menu.Item>*/}
       </Sidebar>
 
       <Sidebar.Pusher dimmed={sidebarOpened}>
