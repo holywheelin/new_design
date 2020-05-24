@@ -18,7 +18,7 @@ const IndexPage = () => (
   <Layout>
     <Segment vertical className="stripe">
       <SocialButtons className="social-buttons">
-        <div className="buttons">
+        <div className="SocialButtons">
           <TwitterShareButton
             url={config.url}
             hashtags={['#ドライブインシアター']}
