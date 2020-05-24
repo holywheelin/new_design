@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
 import instalogo from '../imgs/instagram.svg'
+import twitterlogo from '../imgs/twitter.svg'
+import twitterlogo2 from '../imgs/twitter_2.svg'
 
 const config = {
   size: 100,
@@ -25,13 +27,15 @@ const IndexPage = () => (
             //hashtags={['#ドライブインシアター']}
           >*/}
             <a href="https://twitter.com/holywheelin">
-            <TwitterIcon
+            <img src={twitterlogo2} width="80" height="80" alt="logo" />
+            </a>
+            {/*<TwitterIcon
               size={config.size ? config.size : config.size}
               round
               bgStyle={{ fill: '#ede8cb' }}
               iconFillColor="#8c2125"
             />
-            </a>
+            </a>*/}
           {/*</TwitterShareButton>*/}
           <a href = "https://www.instagram.com/holywheelin">
           <img src={instalogo} width="80" height="80" alt="logo" />
