@@ -19,17 +19,19 @@ const IndexPage = () => (
     <Segment vertical className="stripe">
       <SocialButtons className="social-buttons">
         <div className="SocialButtons">
-          <TwitterShareButton
-            url={config.url}
-            hashtags={['#ドライブインシアター']}
-          >
+          {/*<TwitterShareButton
+            //url={config.url}
+            //hashtags={['#ドライブインシアター']}
+          >*/}
+            <a href="https://twitter.com/holywheelin">
             <TwitterIcon
               size={config.size ? config.size : config.size}
               round
               bgStyle={{ fill: '#ede8cb' }}
               iconFillColor="#8c2125"
             />
-          </TwitterShareButton>
+            </a>
+          {/*</TwitterShareButton>*/}
           <FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
             <FacebookIcon
               size={config.size ? config.size : config.size}
@@ -147,5 +149,7 @@ const AlignInstruction = styled.div`
 const SocialButtons = styled.div`
   text-align: center;
 `;
+
+
 
 export default IndexPage;
