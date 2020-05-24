@@ -44,9 +44,9 @@ const DesktopContainer: React.FC = ({ children }) => {
               <Menu.Item as="a" active>
                 Home
               </Menu.Item>
+              {/*<Menu.Item as="a">Comming Soon!</Menu.Item>
               <Menu.Item as="a">Comming Soon!</Menu.Item>
-              <Menu.Item as="a">Comming Soon!</Menu.Item>
-              <Menu.Item as="a">Comming Soon!</Menu.Item>
+  <Menu.Item as="a">Comming Soon!</Menu.Item>*/}
             </Container>
           </Menu>
           <Heading />

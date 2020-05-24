@@ -26,22 +26,33 @@ const IndexPage = () => (
             <TwitterIcon
               size={config.size ? config.size : config.size}
               round
-              bgStyle={{ fill: '#888888' }}
+              bgStyle={{ fill: '#ede8cb' }}
+              iconFillColor="#8c2125"
             />
           </TwitterShareButton>
           <FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
             <FacebookIcon
               size={config.size ? config.size : config.size}
               round
-              bgStyle={{ fill: '#888888' }}
+              bgStyle={{ fill: '#ede8cb' }}
+              iconFillColor="#8c2125"
             />
           </FacebookShareButton>
         </div>
       </SocialButtons>
     </Segment>
-
+    <Grid stackable verticalAlign="middle" className="container">
+      <iframe
+        width="1280"
+        height="720"
+        src="https://www.youtube.com/embed/19ujruMciyk"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </Grid>
     {/* About this starter */}
-    <Segment vertical className="stripe">
+    {/*<Segment vertical className="stripe">
       <Grid stackable verticalAlign="middle" className="container">
         <Grid.Row>
           <Grid.Column>
@@ -66,7 +77,6 @@ const IndexPage = () => (
       </Grid>
     </Segment>
 
-    {/* Key features */}
     <Segment vertical className="stripe alternate feature">
       <Grid
         columns="1"
@@ -111,7 +121,7 @@ const IndexPage = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+</Segment>*/}
   </Layout>
 );
 
