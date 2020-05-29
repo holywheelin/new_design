@@ -9,7 +9,7 @@ import cars from '../imgs/holywheelin-cars.png';
 
 const IndexPage = () => (
   <Layout>
-    <Segment vertical className="stripe" textAlign="center">
+    <Segment vertical textAlign="center">
       <Movie />
       <div className="SocialButtons">
         <a href="https://twitter.com/holywheelin">
@@ -21,7 +21,7 @@ const IndexPage = () => (
       </div>
     </Segment>
     <CarsDivider />
-    <Segment vertical className="stripe">
+    <Segment vertical>
       <Grid stackable verticalAlign="middle" className="container">
         <Grid.Column>
           <AlignInstruction>
