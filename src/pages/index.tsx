@@ -9,18 +9,16 @@ import cars from '../imgs/holywheelin-cars.png';
 
 const IndexPage = () => (
   <Layout>
-    <Segment vertical className="stripe">
-      <SocialButtons className="social-buttons">
-        <Movie />
-        <div className="SocialButtons">
-          <a href="https://twitter.com/holywheelin">
-            <img src={twitterlogo2} width="80" height="80" alt="sns-twitter" />
-          </a>
-          <a href="https://www.instagram.com/holywheelin">
-            <img src={instalogo} width="80" height="80" alt="sns-instagram" />
-          </a>
-        </div>
-      </SocialButtons>
+    <Segment vertical className="stripe" textAlign="center">
+      <Movie />
+      <div className="SocialButtons">
+        <a href="https://twitter.com/holywheelin">
+          <img src={twitterlogo2} width="80" height="80" alt="sns-twitter" />
+        </a>
+        <a href="https://www.instagram.com/holywheelin">
+          <img src={instalogo} width="80" height="80" alt="sns-instagram" />
+        </a>
+      </div>
     </Segment>
     <CarsDivider />
     <Segment vertical className="stripe">
@@ -111,10 +109,6 @@ const AlignInstruction = styled.div`
   .right {
     text-align: right;
   }
-`;
-
-const SocialButtons = styled.div`
-  text-align: center;
 `;
 
 const CarsDivider = () => {
