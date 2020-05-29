@@ -9,7 +9,6 @@ export const Movie = () => (
     closeIcon
     style={{ top: '10%' }}
   >
-    <Modal.Header>Sample Movie</Modal.Header>
     <Modal.Content>
       <Grid>
         <ResponsiveWrapper>
