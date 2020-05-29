@@ -10,8 +10,8 @@ import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
 //import { Popup } from '../components/Popup';
 import instalogo from '../imgs/instagram.svg'
-import twitterlogo from '../imgs/twitter.svg'
-import twitterlogo2 from '../imgs/twitter_2.svg' 
+import twitterlogo2 from '../imgs/twitter_2.svg'
+import cars from '../imgs/holywheelin-cars.png'
 
 
 const config = {
@@ -29,7 +29,7 @@ const IndexPage = () => (
             //hashtags={['#ドライブインシアター']}
           >*/}
             <a href="https://twitter.com/holywheelin">
-            <img src={twitterlogo2} width="80" height="80" alt="logo" />
+            <img src={twitterlogo2} width="80" height="80"/>
             </a>
             {/*<TwitterIcon
               size={config.size ? config.size : config.size}
@@ -40,7 +40,7 @@ const IndexPage = () => (
             </a>*/}
           {/*</TwitterShareButton>*/}
           <a href = "https://www.instagram.com/holywheelin">
-          <img src={instalogo} width="80" height="80" alt="logo" />
+            <img src={instalogo} width="80" height="80"/>
           </a>
           {/*<FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
             <FacebookIcon
@@ -66,9 +66,9 @@ const IndexPage = () => (
       </div>
       </Grid>*/}
     {/* About this starter */}
-    {/*<Segment vertical className="stripe">
+    <CarsDivider />
+    <Segment vertical className="stripe">
       <Grid stackable verticalAlign="middle" className="container">
-        <Grid.Row>
           <Grid.Column>
             <AlignInstruction>
               <Header as="h1" textAlign="center" content="Concept" />
@@ -87,10 +87,10 @@ const IndexPage = () => (
               <p className="center">近日公開！</p>
             </AlignInstruction>
           </Grid.Column>
-        </Grid.Row>
+        
       </Grid>
     </Segment>
-
+    <CarsDivider />
     <Segment vertical className="stripe alternate feature">
       <Grid
         columns="1"
@@ -135,7 +135,7 @@ const IndexPage = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-</Segment>*/}
+</Segment>
   </Layout>
 );
 
@@ -161,5 +161,13 @@ const AlignInstruction = styled.div`
 const SocialButtons = styled.div`
   text-align: center;
 `;
+
+const CarsDivider = () => {
+  return (
+    <p style={ { textAlign: "center" } }>
+      <img src={cars} height="100em" />
+    </p>
+  )
+};
 
 export default IndexPage;

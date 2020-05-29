@@ -27,7 +27,7 @@ export const Heading: React.FC<Props> = ({ mobile = false }) => (
     <div id="youtubePopup">
       <Movie />
     </div>
-    <Logo />
+    {/*<Logo />*/}
   </Container>
 );
 
