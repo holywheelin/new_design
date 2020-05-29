@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Header,Grid } from 'semantic-ui-react';
 
-import logoSrc from '../../imgs/_Holywheelin-logo_A.png';
+import logoSrc from '../../imgs/holywheelin-white.png';
 
 type Props = {
   mobile?: boolean;
