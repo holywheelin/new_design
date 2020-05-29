@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -16,6 +16,7 @@ import '../../css/semantic.min.css';
 import 'prismjs/themes/prism-okaidia.css';
 import styled from 'styled-components';
 
+
 const DesktopContainer: React.FC = ({ children }) => {
   const [fixed, setFixed] = useState(false);
   const hideFixedMenu = () => setFixed(false);
@@ -94,7 +95,7 @@ const MobileContainer: React.FC = ({ children }) => {
         </Segment>
         {children}
        </Sidebar.Pusher>*/}
-               <Segment
+        <Segment
           textAlign="center"
           style={{ minHeight: 250, padding: '1em 0em' }}
           vertical
@@ -105,7 +106,7 @@ const MobileContainer: React.FC = ({ children }) => {
 };
 
 const StyledBackGround = styled.div`
-  background-color: #ede8cb;
+  background-color: #fff;
 `;
 
 export const Layout: React.FC = ({ children }) => (

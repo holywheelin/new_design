@@ -51,7 +51,7 @@
 }
 
 .ui.stripe.alternate {
-  background-color: #eae7cd;
+  background-color: #fff;
 }
 
 .quote.stripe.segment {
@@ -93,16 +93,16 @@ pre {
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.3em;
-  background: #eae7cd;
+  background: #fff;
 }
 
 .iframe-wrap {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  overflow:auto; 
+  overflow:auto;
   -webkit-overflow-scrolling:touch;
-  border:2px solid #ccc; 
+  border:2px solid #ccc;
 }
 .iframe-wrap iframe {
     position:absolute;

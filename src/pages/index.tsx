@@ -8,9 +8,11 @@ import {
 import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
+import { Popup } from '../components/Popup';
 import instalogo from '../imgs/instagram.svg'
 import twitterlogo from '../imgs/twitter.svg'
-import twitterlogo2 from '../imgs/twitter_2.svg'
+import twitterlogo2 from '../imgs/twitter_2.svg' 
+
 
 const config = {
   size: 100,
@@ -51,18 +53,19 @@ const IndexPage = () => (
         </div>
       </SocialButtons>
     </Segment>
-    <Grid stackable verticalAlign="middle" className="container">
+    <Popup />
+    {/*<Grid stackable verticalAlign="middle" className="container">
       <div class="iframe-wrap">
       <iframe
         width="1280"
         height="720"
-        src="https://www.youtube.com/embed/vfY5GDtiGCU"
+        src="https://www.youtube.com/embed/vfY5GDtiGCU?rel=0&modestbranding=0&showinfo=0&fs=0&controls=0"
         frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
+        allowfullscreen
+      >
       </iframe>
       </div>
-    </Grid>
+      </Grid>*/}
     {/* About this starter */}
     {/*<Segment vertical className="stripe">
       <Grid stackable verticalAlign="middle" className="container">
