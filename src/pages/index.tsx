@@ -8,7 +8,7 @@ import {
 import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
-import { Popup } from '../components/Popup';
+//import { Popup } from '../components/Popup';
 import instalogo from '../imgs/instagram.svg'
 import twitterlogo from '../imgs/twitter.svg'
 import twitterlogo2 from '../imgs/twitter_2.svg' 
@@ -53,7 +53,6 @@ const IndexPage = () => (
         </div>
       </SocialButtons>
     </Segment>
-    <Popup />
     {/*<Grid stackable verticalAlign="middle" className="container">
       <div class="iframe-wrap">
       <iframe
