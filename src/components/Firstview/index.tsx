@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid } from 'semantic-ui-react';
 import holywheelin from '../../imgs/holywheelin.jpg'
+import { Movie } from '../Movie'
+import { Segment } from 'semantic-ui-react';
 
 export const Firstview = () => (
 
@@ -23,22 +24,16 @@ export const Firstview = () => (
   <div className="main-content">
 
     <div className="title-content">
-      <p className="content-header">HolyWheelin' <br/>THEATER&RADIO</p>
+      <p className="content-header">HolyWheelin' <br/>THEATER&RADIO <br /><br/> Curation Drive-in Theater <br /> x <br /> Imaginetion Radio Program </p>
 
-      <p className="content-body">
-      ＜ドライブイン・シアター＞と＜ラジオ＞を合体させた、コロナ時代のポップ・カルチャー誤配プロジェクト
-      </p>
+      <p className="content-body">車を運転する。遠くの町へ行けるようになる。<br />ラジオを聴く。海の向こうの電波をキャッチする。<br />映画を観る。知らない世界がインストールされる。<br />車、ラジオ、映画 -。</p>
 
       {/* button or link or whatever */}
+      <Movie />
       <a href="./" className="space-button">Show Video</a>
         
     </div>
+    <Movie />
   </div>
 </div>
-
-
-
 );
-
-
-

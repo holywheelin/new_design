@@ -143,9 +143,9 @@ pre {
 .star-wars-intro p.intro-text {
   position: relative;
   max-width: 16em;
-  font-size: 200%;
+  font-size: 150%;
   font-weight: 400;
-  margin: 20% auto;
+  margin: 18% auto;
   color: #4ee;
   opacity: 0;
   z-index: 1;
@@ -311,7 +311,7 @@ pre {
 
 @media screen and (max-width: 720px) {
   .star-wars-intro .main-content {
-    font-size: 35px;
+    font-size: 10%;
   }
   .star-wars-intro .title-content {
     position: absolute;
