@@ -9,7 +9,6 @@ export const Movie = () => (
     closeIcon
     style={{ top: '10%' }}
   >
-    <Modal.Header>Sample Movie</Modal.Header>
     <Modal.Content>
       <Grid>
         <ResponsiveWrapper>
@@ -30,7 +29,6 @@ const ResponsiveWrapper = styled.div`
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
-
   iframe {
     position: absolute;
     top: 0;

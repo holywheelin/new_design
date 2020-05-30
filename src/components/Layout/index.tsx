@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Container,
-  Icon,
   Menu,
   Responsive,
   Segment,
@@ -14,9 +12,6 @@ import '../../css/styles.css';
 import '../../css/responsive.css';
 import '../../css/semantic.min.css';
 import 'prismjs/themes/prism-okaidia.css';
-import styled from 'styled-components';
-import backImage from "../../imgs/holywheelin-white.png"
-
 
 const DesktopContainer: React.FC = ({ children }) => {
   const [fixed, setFixed] = useState(false);
@@ -30,27 +25,13 @@ const DesktopContainer: React.FC = ({ children }) => {
         onBottomPassed={showFixedMenu}
         onBottomPassedReverse={hideFixedMenu}
       >
-        <Segment
-          textAlign="center"
-          style={{ minHeight: 500, padding: '1em 0em' }}
-          vertical
-        >
+        <Segment textAlign="center" style={{ padding: '1em 0em' }} vertical>
           <Menu
             fixed={fixed ? 'top' : undefined}
             pointing={!fixed}
             secondary={!fixed}
             size="large"
-          >
-            {/*<Container>*/}
-              {/* TODO: active管理・Link化 */}
-              {/*<Menu.Item as="a" active>
-                Home
-  </Menu.Item>*/}
-              {/*<Menu.Item as="a">Comming Soon!</Menu.Item>
-              <Menu.Item as="a">Comming Soon!</Menu.Item>
-  <Menu.Item as="a">Comming Soon!</Menu.Item>*/}
-            {/*</Container>*/}
-          </Menu>
+          ></Menu>
           <Heading />
         </Segment>
       </Visibility>
@@ -76,45 +57,18 @@ const MobileContainer: React.FC = ({ children }) => {
         onHide={handleSidebarHide}
         vertical
         visible={sidebarOpened}
-      >
-      </Sidebar>
-
-      {/*<Sidebar.Pusher dimmed={sidebarOpened}>
-        <Segment
-          textAlign="center"
-          style={{ minHeight: 250, padding: '1em 0em' }}
-          vertical
-        >
-          <Container>
-            <Menu pointing secondary size="large">
-              <Menu.Item onClick={handleToggle}>
-                <Icon name="sidebar" />
-              </Menu.Item>
-            </Menu>
-          </Container>
-          <Heading mobile />
-        </Segment>
+      ></Sidebar>
+      <Segment textAlign="center" style={{ padding: '1em 0em' }} vertical>
+        <Heading mobile />
         {children}
-       </Sidebar.Pusher>*/}
-        <Segment
-          textAlign="center"
-          style={{ minHeight: 250, padding: '1em 0em' }}
-          vertical
-        ><Heading mobile />
-        {children}</Segment>
+      </Segment>
     </Responsive>
   );
 };
 
-const StyledBackGround = styled.div`
-  background-color: #fff;
-`;
-
 export const Layout: React.FC = ({ children }) => (
-  <StyledBackGround>
-    <div id="bg">
-      <DesktopContainer>{children}</DesktopContainer>
-      <MobileContainer>{children}</MobileContainer>
-    </div>
-  </StyledBackGround>
+  <div id="bg">
+    <DesktopContainer>{children}</DesktopContainer>
+    <MobileContainer>{children}</MobileContainer>
+  </div>
 );

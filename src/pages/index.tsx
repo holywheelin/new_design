@@ -1,93 +1,46 @@
 import React from 'react';
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-} from 'react-share';
 import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
-//import { Popup } from '../components/Popup';
-import instalogo from '../imgs/instagram.svg'
-import twitterlogo2 from '../imgs/twitter_2.svg'
-import cars from '../imgs/holywheelin-cars.png'
-
-
-const config = {
-  size: 100,
-  url: 'https://holywheelin.bsellc.jp/',
-};
+import { Movie } from '../components/Movie';
+import instalogo from '../imgs/instagram.svg';
+import twitterlogo2 from '../imgs/twitter_2.svg';
+import cars from '../imgs/holywheelin-cars.png';
 
 const IndexPage = () => (
   <Layout>
-    <Segment vertical className="stripe">
-      <SocialButtons className="social-buttons">
-        <div className="SocialButtons">
-          {/*<TwitterShareButton
-            //url={config.url}
-            //hashtags={['#ドライブインシアター']}
-          >*/}
-            <a href="https://twitter.com/holywheelin">
-            <img src={twitterlogo2} width="80" height="80"/>
-            </a>
-            {/*<TwitterIcon
-              size={config.size ? config.size : config.size}
-              round
-              bgStyle={{ fill: '#ede8cb' }}
-              iconFillColor="#8c2125"
-            />
-            </a>*/}
-          {/*</TwitterShareButton>*/}
-          <a href = "https://www.instagram.com/holywheelin">
-            <img src={instalogo} width="80" height="80"/>
-          </a>
-          {/*<FacebookShareButton url={`https://holywheelin.bsellc.jp/`}>
-            <FacebookIcon
-              size={config.size ? config.size : config.size}
-              round
-              bgStyle={{ fill: '#ede8cb' }}
-              iconFillColor="#8c2125"
-            />
-        </FacebookShareButton>*/}
-        </div>
-      </SocialButtons>
-    </Segment>
-    {/*<Grid stackable verticalAlign="middle" className="container">
-      <div class="iframe-wrap">
-      <iframe
-        width="1280"
-        height="720"
-        src="https://www.youtube.com/embed/vfY5GDtiGCU?rel=0&modestbranding=0&showinfo=0&fs=0&controls=0"
-        frameborder="0"
-        allowfullscreen
-      >
-      </iframe>
+    <Segment vertical textAlign="center">
+      <Movie />
+      <div className="SocialButtons">
+        <a href="https://twitter.com/holywheelin">
+          <img src={twitterlogo2} width="80" height="80" alt="sns-twitter" />
+        </a>
+        <a href="https://www.instagram.com/holywheelin">
+          <img src={instalogo} width="80" height="80" alt="sns-instagram" />
+        </a>
       </div>
-      </Grid>*/}
-    {/* About this starter */}
+    </Segment>
     <CarsDivider />
-    <Segment vertical className="stripe">
+    <Segment vertical>
       <Grid stackable verticalAlign="middle" className="container">
-          <Grid.Column>
-            <AlignInstruction>
-              <Header as="h1" textAlign="center" content="Concept" />
-              <p>
-                ドライブインシアターとラジオが融合した、全く新しい野外映画プロジェクト
-              </p>
-              <p>
-                ドライブインシアターは、電波をFM送信機で飛ばし、鑑賞者は各カーオーディオで周波数を合わせることによって映画の音声を受信します。
-                その特性を利用し、「Holywheelin’ Theater
-                &Radio」では、映画の上映前に、
-                オリジナルのラジオ番組を放送いたします。
-                毎回異なるパーソナリティをお招きし、これから上映される映画の見どころ・魅力を
-                語っていただく、という放送です。
-              </p>
-              <Header as="h1" textAlign="center" content="開催予定地" />
-              <p className="center">近日公開！</p>
-            </AlignInstruction>
-          </Grid.Column>
-        
+        <Grid.Column>
+          <AlignInstruction>
+            <Header as="h1" textAlign="center" content="Concept" />
+            <p>
+              ドライブインシアターとラジオが融合した、全く新しい野外映画プロジェクト
+            </p>
+            <p>
+              ドライブインシアターは、電波をFM送信機で飛ばし、鑑賞者は各カーオーディオで周波数を合わせることによって映画の音声を受信します。
+              その特性を利用し、「Holywheelin’ Theater
+              &Radio」では、映画の上映前に、
+              オリジナルのラジオ番組を放送いたします。
+              毎回異なるパーソナリティをお招きし、これから上映される映画の見どころ・魅力を
+              語っていただく、という放送です。
+            </p>
+            <Header as="h1" textAlign="center" content="開催予定地" />
+            <p className="center">近日公開！</p>
+          </AlignInstruction>
+        </Grid.Column>
       </Grid>
     </Segment>
     <CarsDivider />
@@ -135,7 +88,7 @@ const IndexPage = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-</Segment>
+    </Segment>
   </Layout>
 );
 
@@ -158,16 +111,12 @@ const AlignInstruction = styled.div`
   }
 `;
 
-const SocialButtons = styled.div`
-  text-align: center;
-`;
-
 const CarsDivider = () => {
   return (
-    <p style={ { textAlign: "center" } }>
-      <img src={cars} height="100em" />
+    <p style={{ textAlign: 'center' }}>
+      <img src={cars} height="100em" alt="car-divider" />
     </p>
-  )
+  );
 };
 
 export default IndexPage;
