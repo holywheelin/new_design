@@ -4,7 +4,7 @@ import { Button, Grid, Modal } from 'semantic-ui-react';
 
 export const Movie = () => (
   <Modal
-    trigger={<SpaceButton>Show Movie</SpaceButton>}
+    trigger={<Button className="space-button">Show Movie</Button>}
     basic
     closeIcon
   >
@@ -24,6 +24,11 @@ export const Movie = () => (
 );
 
 const ResponsiveWrapper = styled.div`
+position: absolute;
+top: 0;
+  width: 100%;
+  height: 0;
+  padding-top: 55.25%;
   iframe {
     position: absolute;
     top: 0;
@@ -36,10 +41,8 @@ const SpaceButton = styled.div`
 star-wars-intro .space-button {
   color: #EBD71C;
   border: 12px solid #EBD71C;
-  padding: 20px;
   background: transparent;
   text-decoration: none;
-  margin: 0 auto;
   display: block;
   text-align: center;
 }

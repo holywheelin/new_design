@@ -117,12 +117,12 @@ pre {
 .wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
 
 #bg {
-  background-image: url("../imgs/_Holywheelin-logo_C.png");
+  background-image: url("../imgs/HolywheelinLogoWH.jpg");
   background-color:rgba(255,255,255,0.85);
   background-blend-mode:lighten;
   background-attachment: fixed;
-  background-repeat: repeat-y;
-  background-size: 30%;
+  background-repeat: no-repeat;
+  background-size: 80%;
   background-position: center;
 }
 
@@ -319,3 +319,5 @@ pre {
     animation: scroll 100s linear 4s forwards;
   }
 }
+
+

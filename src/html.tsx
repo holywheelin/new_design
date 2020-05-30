@@ -33,6 +33,10 @@ export default ({ body, postBodyComponents, headComponents }: Props) => {
         />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
         <link rel="stylesheet" type="text/css" href="./css/starwarsintro.css"></link>
+        <script src="https://unpkg.com/react-leaflet/dist/react-leaflet.min.js"></script>
+        <script src="https://unpkg.com/react-leaflet/dist/react-leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-leaflet/2.0.0/react-leaflet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-leaflet/2.0.0/react-leaflet.js"></script>
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}

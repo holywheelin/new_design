@@ -30,7 +30,6 @@ export const Firstview = () => (
 
       {/* button or link or whatever */}
       <Movie />
-      <a href="./" className="space-button">Show Video</a>
         
     </div>
     <Movie />
