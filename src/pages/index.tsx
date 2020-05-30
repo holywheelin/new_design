@@ -237,7 +237,7 @@ h1{
 }
 img{
   vertical-align:middle;
-  height: 1em;
+  width: 10%;
   margin: 0 30 0 5;
 }
 `;
