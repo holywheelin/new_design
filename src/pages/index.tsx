@@ -11,14 +11,6 @@ const IndexPage = () => (
   <Layout>
     <Segment vertical textAlign="center">
       <Movie />
-      <div className="SocialButtons">
-        <a href="https://twitter.com/holywheelin">
-          <img src={twitterlogo2} width="80" height="80" alt="sns-twitter" />
-        </a>
-        <a href="https://www.instagram.com/holywheelin">
-          <img src={instalogo} width="80" height="80" alt="sns-instagram" />
-        </a>
-      </div>
     </Segment>
     <CarsDivider />
     <Segment vertical>
@@ -80,10 +72,10 @@ const IndexPage = () => (
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              SHINKO(スチャダラパー)feat.中原昌也(a.k.a. HairStylistics)
+              SHINCO(スチャダラパー)feat.中原昌也(a.k.a. HairStylistics)
             </Header>
             <p>
-              SHINKIOさんのポップなサウンドに、中原さんのノイジーなスクリームが響き渡ります(予定)
+              SHINCOさんのポップなサウンドに、中原さんのノイジーなスクリームが響き渡ります(予定)
             </p>
           </Grid.Column>
         </Grid.Row>
