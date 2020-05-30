@@ -7,11 +7,13 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import { Heading } from './Heading';
+import { Firstview } from '../Firstview';
 import { getWidth } from './utils';
 import '../../css/styles.css';
 import '../../css/responsive.css';
 import '../../css/semantic.min.css';
 import 'prismjs/themes/prism-okaidia.css';
+
 
 const DesktopContainer: React.FC = ({ children }) => {
   const [fixed, setFixed] = useState(false);
@@ -33,8 +35,8 @@ const DesktopContainer: React.FC = ({ children }) => {
             size="large"
           >
           <Heading />
-          asdfasdf
           </Menu>
+          <Firstview />
         </Segment>
       </Visibility>
       {children}

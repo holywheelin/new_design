@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import { Segment, Grid, Header, Icon } from 'semantic-ui-react';
 import { Layout } from '../components/Layout';
 import { Movie } from '../components/Movie';
-import instalogo from '../imgs/instagram.svg';
-import twitterlogo2 from '../imgs/twitter_2.svg';
+import { Firstview } from '../components/Firstview';
 import cars from '../imgs/holywheelin-cars.png';
 
 const IndexPage = () => (
   <Layout>
+    {/*<Segment vertical text-align="center">
+      <Firstview />
+</Segment>*/}
     <Segment vertical textAlign="center">
       <Movie />
     </Segment>

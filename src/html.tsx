@@ -32,6 +32,7 @@ export default ({ body, postBodyComponents, headComponents }: Props) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="./css/starwarsintro.css"></link>
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}
